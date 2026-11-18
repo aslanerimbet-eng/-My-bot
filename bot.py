@@ -141,7 +141,7 @@ async def support_message(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     return ConversationHandler.END
 
 
-def main() -> None:
+async def main() -> None:
     app = Application.builder().token(BOT_TOKEN).build()
 
     support_conv = ConversationHandler(
@@ -167,4 +167,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import asyncio
+    asyncio.run(main())
