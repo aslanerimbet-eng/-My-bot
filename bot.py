@@ -163,7 +163,7 @@ async def main() -> None:
     app.add_handler(CallbackQueryHandler(partner, pattern="^partner$"))
 
     logger.info("Бот запущен...")
-    app.run_polling()
+    await app.run_polling()
 
 
 if __name__ == "__main__":
