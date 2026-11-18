@@ -1,4 +1,4 @@
-import logging
+import asyncio
 import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
@@ -134,4 +134,4 @@ if __name__ == "__main__":
     app.add_handler(CallbackQueryHandler(partner, pattern="^partner$"))
 
     logger.info("Бот запущен...")
-    app.run_polling()
+    asyncio.run(app.run_polling())
